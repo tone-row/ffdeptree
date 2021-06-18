@@ -1,5 +1,7 @@
 # ffdeptree
 
+🌳 (**f**lowchart **f**un **dep**endency **tree**)
+
 **ffdeptree** visulizes the structure of file imports in javascript or typescript projects. It uses [node-dependency-tree](https://github.com/dependents/node-dependency-tree) to parse the files and create the graph, and [flowchart-fun](https://flowchart.fun/) to make the visualization.
 
 ## How to Use
