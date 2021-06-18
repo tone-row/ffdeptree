@@ -1,0 +1,16 @@
+{
+  "name": "ffdeptree",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": "./index.js",
+  "dependencies": {
+    "chokidar": "^3.5.2",
+    "dependency-tree": "^8.1.1",
+    "express": "^4.17.1",
+    "lz-string": "^1.4.4",
+    "minimist": "^1.2.5",
+    "open": "^8.2.0",
+    "socket.io": "^4.1.2"
+  }
+}

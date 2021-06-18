@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dependency Graph - Flowchart Fun</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body,
+      iframe {
+        height: 100%;
+      }
+      iframe {
+        width: 100vw;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe frameborder="0"></iframe>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+      socket.on("navigate", function (msg) {
+        if (msg.url) {
+          document.querySelector("iframe").setAttribute("src", msg.url);
+        }
+      });
+    </script>
+  </body>
+</html>
