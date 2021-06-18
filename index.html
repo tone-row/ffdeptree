@@ -18,18 +18,60 @@
       }
       iframe {
         width: 100vw;
-        background-color: orange;
+        position: relative;
+      }
+      svg {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
       }
     </style>
   </head>
   <body>
+    <?xml version="1.0" encoding="utf-8"?>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      style="
+        margin: auto;
+        background: rgb(255, 255, 255);
+        display: block;
+        shape-rendering: auto;
+      "
+      width="200px"
+      height="200px"
+      viewBox="0 0 100 100"
+      preserveAspectRatio="xMidYMid"
+    >
+      <g transform="translate(50 50)">
+        <g>
+          <animateTransform
+            attributeName="transform"
+            type="rotate"
+            values="0;45"
+            keyTimes="0;1"
+            dur="0.7042253521126761s"
+            repeatCount="indefinite"
+          ></animateTransform>
+          <path
+            d="M15.491933384829668 -4 L17.491933384829668 -4 L17.491933384829668 4 L15.491933384829668 4 A16 16 0 0 1 13.782878274849512 8.126024025357133 L13.782878274849512 8.126024025357133 L15.197091837222608 9.540237587730228 L9.54023758773023 15.197091837222608 L8.126024025357134 13.782878274849512 A16 16 0 0 1 4 15.491933384829668 L4 15.491933384829668 L4 17.491933384829668 L-3.9999999999999982 17.491933384829668 L-3.9999999999999982 15.491933384829668 A16 16 0 0 1 -8.126024025357129 13.782878274849514 L-8.126024025357129 13.782878274849514 L-9.540237587730225 15.19709183722261 L-15.197091837222608 9.540237587730227 L-13.782878274849512 8.12602402535713 A16 16 0 0 1 -15.491933384829666 4.000000000000004 L-15.491933384829666 4.000000000000004 L-17.491933384829665 4.000000000000004 L-17.491933384829668 -4.000000000000001 L-15.491933384829668 -4.000000000000001 A16 16 0 0 1 -13.782878274849516 -8.126024025357127 L-13.782878274849516 -8.126024025357127 L-15.197091837222612 -9.540237587730221 L-9.540237587730228 -15.197091837222606 L-8.126024025357133 -13.782878274849512 A16 16 0 0 1 -4.000000000000005 -15.491933384829666 L-4.000000000000005 -15.491933384829666 L-4.000000000000005 -17.491933384829665 L3.999999999999999 -17.491933384829668 L3.9999999999999996 -15.491933384829668 A16 16 0 0 1 8.126024025357127 -13.782878274849516 L8.126024025357127 -13.782878274849516 L9.540237587730221 -15.197091837222612 L15.197091837222606 -9.540237587730228 L13.782878274849512 -8.126024025357133 A16 16 0 0 1 15.491933384829666 -4.000000000000006 M0 -9A9 9 0 1 0 0 9 A9 9 0 1 0 0 -9"
+            fill="#cccccc"
+          ></path>
+        </g>
+      </g>
+    </svg>
     <iframe frameborder="0"></iframe>
     <script src="/socket.io/socket.io.js"></script>
     <script>
       var socket = io();
       socket.on("navigate", function (msg) {
         if (msg.url) {
-          document.querySelector("iframe").setAttribute("src", msg.url);
+          document.querySelector("iframe").remove();
+          const iframe = document.createElement("iframe");
+          iframe.setAttribute("frameborder", "0");
+          iframe.setAttribute("src", msg.url);
+          document.body.appendChild(iframe);
         }
       });
     </script>
