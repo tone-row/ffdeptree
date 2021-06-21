@@ -32,6 +32,8 @@ The package uses [node-dependency-tree](https://github.com/dependents/node-depen
 
 In watch mode, it uses [express](https://github.com/expressjs/express) and [socket.io](https://github.com/socketio/socket.io) open the group and dynamically update the page.
 
+This package was inspired by [madge](https://github.com/pahen/madge)
+
 ## API
 
 With the exception of `--watch`, `--port` and `--fullscreen`, all other arguments are passed to node-dependency-tree. You can see the arguments it accepts [here](https://github.com/dependents/node-dependency-tree#usage).
