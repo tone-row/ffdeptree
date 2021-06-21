@@ -1,5 +1,6 @@
 {
   "name": "ffdeptree",
+  "description": "Fast import graph visualizer for Typescript or Javscript projects",
   "version": "0.0.3",
   "main": "index.js",
   "license": "MIT",

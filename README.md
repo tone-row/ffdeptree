@@ -1,14 +1,25 @@
+<div align="center">
+
 # ffdeptree
 
-🌳 (**f**lowchart **f**un **dep**endency **tree**)
+Visualize the structure of file imports in typescript or javascript projects with one command.
 
-**ffdeptree** visualizes the structure of file imports in javascript or typescript projects. It uses [node-dependency-tree](https://github.com/dependents/node-dependency-tree) to parse the files and create the graph, and [flowchart-fun](https://flowchart.fun/) to make the visualization.
+<!-- prettier-ignore-start -->
+[![version][version-badge]][package]
+[![downloads][downloads-badge]][npmtrends]
+[![MIT License][license-badge]][license]
+[![PRs Welcome][prs-badge]][prs]
+<!-- prettier-ignore-end -->
+
+Uses [node-dependency-tree](https://github.com/dependents/node-dependency-tree) to parse the files and create the graph, and [flowchart-fun](https://flowchart.fun/) to make the visualization.
+
+</div>
 
 ![Demo of using ffdeptree in watch mode](/demo.gif)
 
-## How to Use
+## How To Use
 
-I recommend running with `npx` to avoid adding dependencies to your project.
+In most cases you can run this with `npx` to avoid adding dependencies to your project.
 
 ```
 npx ffdeptree --filename src/index.ts --directory src/
@@ -25,3 +36,24 @@ With the exception of `--watch`, `--port` and `--fullscreen`, all other argument
 | --watch      | 0 or 1 (default 0) | Whether to watch files and sync changes in browser      |
 | --port       | (default 3040)     | Which port to use in watch mode                         |
 | --fullscreen | 0 or 1 (default 1) | Whether to show visualization using full browser window |
+
+<!-- prettier-ignore-start -->
+[coverage]: https://codecov.io/github/tone-row/ffdeptree
+[version-badge]: https://img.shields.io/npm/v/ffdeptree.svg?style=flat-square
+[package]: https://www.npmjs.com/package/ffdeptree
+[downloads-badge]: https://img.shields.io/npm/dm/ffdeptree.svg?style=flat-square
+[npmtrends]: https://www.npmtrends.com/ffdeptree
+[license-badge]: https://img.shields.io/npm/l/ffdeptree.svg?style=flat-square
+[license]: https://github.com/tone-row/ffdeptree/blob/main/LICENSE
+[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+[prs]: https://makeapullrequest.com
+[coc-badge]: https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square
+[coc]: https://github.com/tone-row/ffdeptree/blob/main/CODE_OF_CONDUCT.md
+[emojis]: https://github.com/all-contributors/all-contributors#emoji-key
+[all-contributors]: https://github.com/all-contributors/all-contributors
+[all-contributors-badge]: https://img.shields.io/github/all-contributors/tone-row/ffdeptree?color=orange&style=flat-square
+[bugs]: https://github.com/tone-row/ffdeptree/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sort%3Acreated-desc+label%3Abug
+[requests]: https://github.com/tone-row/ffdeptree/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3Aenhancement
+[good-first-issue]: https://github.com/tone-row/ffdeptree/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+sort%3Areactions-%2B1-desc+label%3Aenhancement+label%3A%22good+first+issue%22
+[node-gyp]: https://github.com/nodejs/node-gyp#installation
+<!-- prettier-ignore-end -->
