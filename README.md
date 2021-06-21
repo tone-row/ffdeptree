@@ -2,8 +2,6 @@
 
 # ffdeptree
 
-Visualize the structure of file imports in typescript or javascript projects with one command.
-
 <!-- prettier-ignore-start -->
 [![version][version-badge]][package]
 [![downloads][downloads-badge]][npmtrends]
@@ -11,21 +9,25 @@ Visualize the structure of file imports in typescript or javascript projects wit
 [![PRs Welcome][prs-badge]][prs]
 <!-- prettier-ignore-end -->
 
-Uses [node-dependency-tree](https://github.com/dependents/node-dependency-tree) to parse the files and create the graph, and [flowchart-fun](https://flowchart.fun/) to make the visualization.
+Visualize the structure of file imports in typescript or javascript projects with one command.
+
+<img src="demo.gif" alt="Demo of using ffdeptree in watch mode" style="border-radius: 20px">
 
 </div>
 
-![Demo of using ffdeptree in watch mode](/demo.gif)
+---
 
-## How To Use
+## How to Use
 
-In most cases you can run this with `npx` to avoid adding dependencies to your project.
-
-```
+```shell
 npx ffdeptree --filename src/index.ts --directory src/
 ```
 
 The `--filename` and `--directory` arguments are required, where the filename is the entry file to your project and the directory is where your source code lives.
+
+## How It Works
+
+Uses [node-dependency-tree](https://github.com/dependents/node-dependency-tree) to parse the files and create the graph, and [flowchart-fun](https://flowchart.fun/) to make the visualization.
 
 ## API
 
