@@ -17,6 +17,8 @@ Visualize the structure of file imports in typescript or javascript projects wit
 
 ## How to Use
 
+Run this command inside your codebase:
+
 ```
 npx ffdeptree --filename src/index.ts --directory src/
 ```
