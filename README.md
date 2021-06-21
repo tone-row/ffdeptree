@@ -28,15 +28,15 @@ npx ffdeptree --filename src/index.ts --directory src/
 
 ## How It Works
 
-The package uses [node-dependency-tree](https://github.com/dependents/node-dependency-tree) to parse the files and create the graph, and [flowchart-fun](https://flowchart.fun/) to make the visualization.
+The package uses [node-dependency-tree] to parse the files and create the graph, and [flowchart-fun](https://flowchart.fun/) to make the visualization.
 
 In watch mode, it uses [express](https://github.com/expressjs/express) and [socket.io](https://github.com/socketio/socket.io) open the group and dynamically update the page.
 
 This package was inspired by [madge](https://github.com/pahen/madge)
 
-## API
+## Options
 
-With the exception of `--watch`, `--port` and `--fullscreen`, all other arguments are passed to node-dependency-tree. You can see the arguments it accepts [here](https://github.com/dependents/node-dependency-tree#usage).
+All arguments excluding the ones listed below are parsed and passed to [node-dependency-tree]. You can view the arguments for that [here](https://github.com/dependents/node-dependency-tree#usage).
 
 | Argument       | Value              | Description                                             |
 | -------------- | ------------------ | ------------------------------------------------------- |
@@ -61,4 +61,5 @@ MIT
 [license]: https://github.com/tone-row/ffdeptree/blob/main/LICENSE
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: https://makeapullrequest.com
+[node-dependency-tree]: https://github.com/dependents/node-dependency-tree
 <!-- prettier-ignore-end -->
