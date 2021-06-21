@@ -11,7 +11,7 @@
 
 Visualize the structure of file imports in typescript or javascript projects with one command.
 
-![Demo of using ffdeptree in watch mode](/demo.gif)
+![Demo of using ffdeptree in watch mode](https://github.com/tone-row/ffdeptree/blob/main/demo.gif?raw=true)
 
 </div>
 
