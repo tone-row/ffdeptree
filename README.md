@@ -42,6 +42,14 @@ With the exception of `--watch`, `--port` and `--fullscreen`, all other argument
 | --port       | (default 3040)     | Which port to use in watch mode                         |
 | --fullscreen | 0 or 1 (default 1) | Whether to show visualization using full browser window |
 
+## Contributions
+
+Contributions of any kind welcome!
+
+## License
+
+MIT
+
 <!-- prettier-ignore-start -->
 [version-badge]: https://img.shields.io/npm/v/ffdeptree.svg?style=flat-square
 [package]: https://www.npmjs.com/package/ffdeptree
