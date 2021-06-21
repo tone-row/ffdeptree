@@ -21,7 +21,10 @@ Visualize the structure of file imports in typescript or javascript projects wit
 npx ffdeptree --filename src/index.ts --directory src/
 ```
 
-Arguments `--filename` and `--directory` are required. <br/>`--filename` is the path to the file whose import graph will be visualized. <br/>`--directory` is where the source code lives.
+Arguments `--filename` and `--directory` are required.
+
+- `--filename` is the path to the file whose import graph will be visualized.
+- `--directory` is where the source code lives.
 
 ## How It Works
 
