@@ -38,11 +38,11 @@ This package was inspired by [madge](https://github.com/pahen/madge)
 
 With the exception of `--watch`, `--port` and `--fullscreen`, all other arguments are passed to node-dependency-tree. You can see the arguments it accepts [here](https://github.com/dependents/node-dependency-tree#usage).
 
-| Argument     | Value              | Description                                             |
-| ------------ | ------------------ | ------------------------------------------------------- |
-| --watch      | 0 or 1 (default 0) | Whether to watch files and sync changes in browser      |
-| --port       | (default 3040)     | Which port to use in watch mode                         |
-| --fullscreen | 0 or 1 (default 1) | Whether to show visualization using full browser window |
+| Argument       | Value              | Description                                             |
+| -------------- | ------------------ | ------------------------------------------------------- |
+| `--watch`      | 0 or 1 (default 0) | Whether to watch files and sync changes in browser      |
+| `--port`       | (default 3040)     | Which port to use in watch mode                         |
+| `--fullscreen` | 0 or 1 (default 1) | Whether to show visualization using full browser window |
 
 ## Contributions
 
