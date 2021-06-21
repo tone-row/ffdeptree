@@ -1,27 +1,65 @@
+<div align="center">
+
 # ffdeptree
 
-🌳 (**f**lowchart **f**un **dep**endency **tree**)
+<!-- prettier-ignore-start -->
+[![version][version-badge]][package]
+[![downloads][downloads-badge]][npmtrends]
+[![MIT License][license-badge]][license]
+[![PRs Welcome][prs-badge]][prs]
+<!-- prettier-ignore-end -->
 
-**ffdeptree** visualizes the structure of file imports in javascript or typescript projects. It uses [node-dependency-tree](https://github.com/dependents/node-dependency-tree) to parse the files and create the graph, and [flowchart-fun](https://flowchart.fun/) to make the visualization.
+Visualize the structure of file imports in typescript or javascript projects with one command.
 
 ![Demo of using ffdeptree in watch mode](/demo.gif)
 
+</div>
+
 ## How to Use
 
-I recommend running with `npx` to avoid adding dependencies to your project.
+Run this command inside your codebase:
 
 ```
 npx ffdeptree --filename src/index.ts --directory src/
 ```
 
-The `--filename` and `--directory` arguments are required, where the filename is the entry file to your project and the directory is where your source code lives.
+- `--filename` is the path to the file whose import graph will be visualized.
+- `--directory` is where the source code lives.
 
-## API
+## How It Works
 
-With the exception of `--watch`, `--port` and `--fullscreen`, all other arguments are passed to node-dependency-tree. You can see the arguments it accepts [here](https://github.com/dependents/node-dependency-tree#usage).
+The package uses [node-dependency-tree] to parse the files and create the graph, and [flowchart-fun](https://flowchart.fun/) to make the visualization.
 
-| Argument     | Value              | Description                                             |
-| ------------ | ------------------ | ------------------------------------------------------- |
-| --watch      | 0 or 1 (default 0) | Whether to watch files and sync changes in browser      |
-| --port       | (default 3040)     | Which port to use in watch mode                         |
-| --fullscreen | 0 or 1 (default 1) | Whether to show visualization using full browser window |
+In watch mode, it uses [express](https://github.com/expressjs/express) and [socket.io](https://github.com/socketio/socket.io) open the group and dynamically update the page.
+
+This package was inspired by [madge](https://github.com/pahen/madge)
+
+## Options
+
+All arguments excluding the ones listed below are parsed and passed to [node-dependency-tree]. You can view the arguments for that [here](https://github.com/dependents/node-dependency-tree#usage).
+
+| Argument       | Value              | Description                                             |
+| -------------- | ------------------ | ------------------------------------------------------- |
+| `--watch`      | 0 or 1 (default 0) | Whether to watch files and sync changes in browser      |
+| `--port`       | (default 3040)     | Which port to use in watch mode                         |
+| `--fullscreen` | 0 or 1 (default 1) | Whether to show visualization using full browser window |
+
+## Contributions
+
+Contributions of any kind welcome!
+
+## License
+
+MIT
+
+<!-- prettier-ignore-start -->
+[version-badge]: https://img.shields.io/npm/v/ffdeptree.svg?style=flat-square
+[package]: https://www.npmjs.com/package/ffdeptree
+[downloads-badge]: https://img.shields.io/npm/dm/ffdeptree.svg?style=flat-square
+[npmtrends]: https://www.npmtrends.com/ffdeptree
+[license-badge]: https://img.shields.io/npm/l/ffdeptree.svg?style=flat-square
+[license]: https://github.com/tone-row/ffdeptree/blob/main/LICENSE
+[prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
+[prs]: https://makeapullrequest.com
+[node-dependency-tree]: https://github.com/dependents/node-dependency-tree
+<!-- prettier-ignore-end -->
